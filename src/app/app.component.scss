@@ -1,0 +1,82 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+::ng-deep {
+ .mat-form-field-appearance-fill .mat-form-field-flex.ng-invalid{
+    outline: none !important;
+    border:2px solid red;
+    border-radius: 8p !important;
+  }
+}
+
+
+
+<input type="text" matInput formControlName="name" placeholder="User name" />
+<mat-error *ngIf="existUserForm.invalid">User not entered</mat-error>
+
+
+
+<input type="text" matInput formControlName="name" placeholder="mailbox@mail.com" />
+<mat-error *ngIf="existUserForm.invalid">Email not entered</mat-error>
+
+
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 7px 20px;
+  background: #1F426B;
+  border: 1px solid #257095;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 320px;
+  color: #fff;
+  line-height: 16px;
+
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex{
+  padding: 0 !important; 
+  background: #1F426B !important;
+  position: relative;
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover,
+      textarea:-webkit-autofill:focus,
+      select:-webkit-autofill,
+      select:-webkit-autofill:hover,
+      select:-webkit-autofill:focus {
+          color: rgb(255, 255, 255);
+          -webkit-text-fill-color: white !important;
+          transition: background-color 5000s ease-in-out 0s;
+          background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);  
+      }
+        
+  .mat-form-field-autofill-control { 
+      color: white; 
+  }
+
+
+} 
+.mat-error {
+  padding: 8px;
+  position: relative;
+  top: 2px;
+ left: -20px;
+ font-size: 12px;
+}
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  color: #f44336;
+  height: 38px;
+  padding: 4px;
+  position: absolute !important;
+  width: 323px;
+  left: -5px;
+  top: -6px;
+}
